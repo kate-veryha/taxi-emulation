@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div id="map"></div>
+    <script>
+      var drivers = <%- drivers %>;
+    </script>
+    <script src='/javascripts/my-map.js'>
+    </script>
+
+    <script src=<%= url %>
+            async defer></script>
+    <script>
+      var es = new EventSource('/events');
+
+      es.addEventListener('newPosition', (event) => {
+        var data = JSON.parse(event.data);
+        google.maps.event.trigger(window.markers[data.carId], 'new-marker-position',  data)
+      })
+    </script>
+  </body>
+</html>

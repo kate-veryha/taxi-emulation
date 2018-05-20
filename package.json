@@ -1,0 +1,30 @@
+{
+  "name": "lab3-express",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "mongodb": "^3.0.2",
+    "morgan": "~1.9.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "serve-favicon": "~2.4.5"
+  },
+  "main": "app.js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
